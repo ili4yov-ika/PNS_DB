@@ -1,0 +1,187 @@
+object FormSeller: TFormSeller
+  Left = 762
+  Top = 32
+  Width = 499
+  Height = 465
+  Caption = 'FormSeller'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = OnClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 483
+    Height = 193
+    Align = alTop
+    TabOrder = 0
+    object DBGrid1: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 481
+      Height = 168
+      Align = alClient
+      DataSource = DataSource1
+      ReadOnly = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+    end
+    object Panel2: TPanel
+      Left = 1
+      Top = 169
+      Width = 481
+      Height = 23
+      Align = alBottom
+      TabOrder = 1
+      DesignSize = (
+        481
+        23)
+      object Label1: TLabel
+        Left = 9
+        Top = 3
+        Width = 169
+        Height = 19
+        Anchors = [akLeft]
+        Caption = #1042#1099#1073#1077#1088#1077#1090#1077' '#1089#1074#1086#1081' '#1085#1086#1084#1077#1088' '#1080#1079' '#1089#1087#1080#1089#1082#1072':'
+      end
+      object ComboBoxNumberSeller: TComboBox
+        Left = 184
+        Top = -1
+        Width = 208
+        Height = 21
+        Anchors = [akLeft, akRight]
+        ItemHeight = 13
+        TabOrder = 0
+      end
+      object Button1: TButton
+        Left = 397
+        Top = -1
+        Width = 75
+        Height = 21
+        Anchors = [akRight]
+        Caption = #1042#1099#1073#1088#1072#1090#1100
+        TabOrder = 1
+        OnClick = Button1Click
+      end
+    end
+  end
+  object GroupBox: TGroupBox
+    Left = 0
+    Top = 193
+    Width = 483
+    Height = 233
+    Align = alClient
+    Caption = #1055#1086#1082#1091#1087#1082#1072' '#1086#1090' '#1087#1088#1086#1076#1072#1074#1094#1072' '
+    TabOrder = 1
+    Visible = False
+    object DBGrid2: TDBGrid
+      Left = 2
+      Top = 15
+      Width = 479
+      Height = 177
+      Align = alClient
+      DataSource = DataSource2
+      ReadOnly = True
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'MS Sans Serif'
+      TitleFont.Style = []
+    end
+    object Panel3: TPanel
+      Left = 2
+      Top = 192
+      Width = 479
+      Height = 39
+      Align = alBottom
+      TabOrder = 1
+      DesignSize = (
+        479
+        39)
+      object Button2: TButton
+        Left = 8
+        Top = 6
+        Width = 114
+        Height = 25
+        Anchors = [akLeft, akTop, akBottom]
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1086#1082#1091#1087#1082#1091
+        TabOrder = 0
+        OnClick = Button2Click
+      end
+      object Button3: TButton
+        Left = 372
+        Top = 6
+        Width = 100
+        Height = 25
+        Anchors = [akTop, akRight, akBottom]
+        Caption = #1057#1084#1077#1085#1080#1090#1100' '#1089#1084#1077#1085#1091
+        TabOrder = 1
+        OnClick = Button3Click
+      end
+    end
+  end
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
+      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 272
+    Top = 32
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT *FROM Sellers')
+    Left = 304
+    Top = 32
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOQuery1
+    Left = 336
+    Top = 32
+  end
+  object ADOConnection2: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
+      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.Jet.OLEDB.4.0'
+    Left = 104
+    Top = 264
+  end
+  object ADOQuery2: TADOQuery
+    Active = True
+    Connection = ADOConnection2
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT *FROM Purchase')
+    Left = 152
+    Top = 248
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOQuery2
+    Left = 192
+    Top = 256
+  end
+end
