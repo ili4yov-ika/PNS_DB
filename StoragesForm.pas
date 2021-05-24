@@ -16,7 +16,6 @@ type
     ADOQuery1: TADOQuery;
     DataSource1: TDataSource;
     DBGrid2: TDBGrid;
-    ADOConnection2: TADOConnection;
     ADOQuery2: TADOQuery;
     DataSource2: TDataSource;
     Panel1: TPanel;

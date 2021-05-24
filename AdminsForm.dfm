@@ -6882,7 +6882,7 @@ object FormAdmin: TFormAdmin
       Left = 2
       Top = 15
       Width = 719
-      Height = 216
+      Height = 191
       Align = alClient
       DataSource = DataSource1
       TabOrder = 0
@@ -6891,6 +6891,23 @@ object FormAdmin: TFormAdmin
       TitleFont.Height = -11
       TitleFont.Name = 'MS Sans Serif'
       TitleFont.Style = []
+    end
+    object Panel1: TPanel
+      Left = 2
+      Top = 206
+      Width = 719
+      Height = 25
+      Align = alBottom
+      TabOrder = 1
+      object Button1: TButton
+        Left = 8
+        Top = 0
+        Width = 121
+        Height = 25
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1088#1086#1076#1072#1074#1094#1072
+        TabOrder = 0
+        OnClick = Button1Click
+      end
     end
   end
   object GroupBox2: TGroupBox
@@ -6907,6 +6924,7 @@ object FormAdmin: TFormAdmin
       Width = 719
       Height = 202
       Align = alClient
+      DataSource = DataSource2
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -6918,8 +6936,15 @@ object FormAdmin: TFormAdmin
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
-      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=PNS_D' +
+      'B.mdb;Mode=Share Deny None;Persist Security Info=False;Jet OLEDB' +
+      ':System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Databas' +
+      'e Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking' +
+      ' Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bul' +
+      'k Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Cr' +
+      'eate System Database=False;Jet OLEDB:Encrypt Database=False;Jet ' +
+      'OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Witho' +
+      'ut Replica Repair=False;Jet OLEDB:SFP=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -6941,20 +6966,9 @@ object FormAdmin: TFormAdmin
     Left = 224
     Top = 72
   end
-  object ADOConnection2: TADOConnection
-    Connected = True
-    ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
-      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
-    LoginPrompt = False
-    Mode = cmShareDenyNone
-    Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 152
-    Top = 308
-  end
   object ADOQuery2: TADOQuery
     Active = True
-    Connection = ADOConnection2
+    Connection = ADOConnection1
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (

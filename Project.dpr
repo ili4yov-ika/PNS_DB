@@ -8,7 +8,8 @@ uses
   AdminsForm in 'AdminsForm.pas' {FormAdmin},
   PurchaseForm in 'PurchaseForm.pas' {FormPurchase},
   APForm in 'APForm.pas' {FormAP},
-  APoSForm in 'APoSForm.pas' {FormAPoS};
+  APoSForm in 'APoSForm.pas' {FormAPoS},
+  AddSellerForm in 'AddSellerForm.pas' {FormAddSeller};
 
 {$R *.res}
 
@@ -21,5 +22,6 @@ begin
   Application.CreateForm(TFormPurchase, FormPurchase);
   Application.CreateForm(TFormAP, FormAP);
   Application.CreateForm(TFormAPoS, FormAPoS);
+  Application.CreateForm(TFormAddSeller, FormAddSeller);
   Application.Run;
 end.

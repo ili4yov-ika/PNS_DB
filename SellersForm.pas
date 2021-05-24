@@ -17,7 +17,6 @@ type
     ADOQuery1: TADOQuery;
     DataSource1: TDataSource;
     GroupBox: TGroupBox;
-    ADOConnection2: TADOConnection;
     ADOQuery2: TADOQuery;
     DataSource2: TDataSource;
     DBGrid2: TDBGrid;

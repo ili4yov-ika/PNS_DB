@@ -1,6 +1,6 @@
 object FormMain: TFormMain
-  Left = 152
-  Top = 221
+  Left = 641
+  Top = 316
   Width = 517
   Height = 235
   BorderStyle = bsSizeToolWin

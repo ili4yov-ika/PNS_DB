@@ -1,6 +1,6 @@
 object FormSeller: TFormSeller
-  Left = 762
-  Top = 32
+  Left = 313
+  Top = 138
   Width = 499
   Height = 465
   Caption = 'FormSeller'
@@ -6981,8 +6981,15 @@ object FormSeller: TFormSeller
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
-      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
+      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=PNS_D' +
+      'B.mdb;Mode=Share Deny None;Persist Security Info=False;Jet OLEDB' +
+      ':System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Databas' +
+      'e Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking' +
+      ' Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bul' +
+      'k Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Cr' +
+      'eate System Database=False;Jet OLEDB:Encrypt Database=False;Jet ' +
+      'OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Witho' +
+      'ut Replica Repair=False;Jet OLEDB:SFP=False'
     LoginPrompt = False
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
@@ -7004,26 +7011,15 @@ object FormSeller: TFormSeller
     Left = 336
     Top = 32
   end
-  object ADOConnection2: TADOConnection
-    Connected = True
-    ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Admin\Docu' +
-      'ments\PNS_DB\PNS_DB.mdb;Persist Security Info=False'
-    LoginPrompt = False
-    Mode = cmShareDenyNone
-    Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 104
-    Top = 264
-  end
   object ADOQuery2: TADOQuery
     Active = True
-    Connection = ADOConnection2
+    Connection = ADOConnection1
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
       'SELECT *FROM Purchase')
-    Left = 152
-    Top = 248
+    Left = 160
+    Top = 256
   end
   object DataSource2: TDataSource
     DataSet = ADOQuery2

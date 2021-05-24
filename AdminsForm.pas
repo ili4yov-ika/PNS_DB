@@ -16,10 +16,12 @@ type
     ADOQuery1: TADOQuery;
     DataSource1: TDataSource;
     DBGrid2: TDBGrid;
-    ADOConnection2: TADOConnection;
     ADOQuery2: TADOQuery;
     DataSource2: TDataSource;
+    Panel1: TPanel;
+    Button1: TButton;
     procedure OnClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,11 +33,19 @@ var
 
 implementation
 
+uses AddSellerForm;
+
 {$R *.dfm}
 
 procedure TFormAdmin.OnClose(Sender: TObject; var Action: TCloseAction);
 begin
 Application.Terminate;
+end;
+
+procedure TFormAdmin.Button1Click(Sender: TObject);
+begin
+AdoQuery1.Insert;
+FormAddSeller.show;
 end;
 
 end.
